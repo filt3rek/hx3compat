@@ -105,7 +105,7 @@ class HttpConnection implements Connection {
 			return "hxr" + s.toString();
 		} catch( e : Dynamic ) {
 			var s = new haxe.Serializer();
-			s.serializeException(e);
+			s.serializeException(Std.string(e));
 			return "hxr" + s.toString();
 		}
 	}
